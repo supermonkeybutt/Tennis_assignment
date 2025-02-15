@@ -45,6 +45,7 @@ class Tennis:
         """
         if input_file:
             with open(input_file, 'r') as f:
+                print(self.returnScore())
                 for line in f:
                     userInput = line.strip()
                     if userInput in ["1", "2"]:
@@ -54,6 +55,7 @@ class Tennis:
                         raise ValueError(f"Invalid input, {userInput}")
         else:
             print("Enter the player number who scored: 1 or 2, or q to quit scoring")
+            print(self.returnScore())
             while True:
                 userInput = input("Enter the player number who scored: ")
                 if userInput in ["1", "2"]:
